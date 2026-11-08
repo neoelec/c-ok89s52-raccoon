@@ -1,0 +1,28 @@
+# Build directories
+bin/
+obj/
+build/
+
+# SDCC / Assembler / Linker artifacts
+*.rel
+*.lst
+*.rst
+*.sym
+*.adb
+*.cdb
+*.ihx
+*.hex
+*.lk
+*.map
+*.mem
+*.noi
+*.omf
+
+# Temporary / Backup / Agent files
+*~
+*.bak
+*.patch
+*.swp
+.vscode/
+.agents/*
+!.agents/skills/
