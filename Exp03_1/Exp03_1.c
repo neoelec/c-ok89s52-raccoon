@@ -8,12 +8,11 @@
 
 #include <at89s52.h> // include AT89S52 definition file
 
-#define SEG_PATTERN \
-    (*(volatile uint8_t __xdata *)0x8100) /* segment pattern data */
-#define DIG_SELECT (*(volatile uint8_t __xdata *)0x8200) /* digit select data */
+SFRX(SEG_PATTERN, 0x8100); /* segment pattern data */
+SFRX(DIG_SELECT, 0x8200);  /* digit select data */
 
-#define LCD_WR_INST (*(volatile uint8_t __xdata *)0x8300) /* LCD module */
-#define LCD_WR_DATA (*(volatile uint8_t __xdata *)0x8301)
+SFRX(LCD_WR_INST, 0x8300); /* LCD module */
+SFRX(LCD_WR_DATA, 0x8301);
 
 void Kit_initialize(void) /* initialize OK-89S52 kit */
 {

@@ -11,41 +11,39 @@
 /*   OK-89S52 Kit I/O Address                                                 */
 /* -------------------------------------------------------------------------- */
 
-#define RTC_SECOND (*(volatile uint8_t __xdata *)0x8000) /* DS12C887 RTC */
-#define RTC_SEC_ALM (*(volatile uint8_t __xdata *)0x8001)
-#define RTC_MINUTE (*(volatile uint8_t __xdata *)0x8002)
-#define RTC_MIN_ALM (*(volatile uint8_t __xdata *)0x8003)
-#define RTC_HOUR (*(volatile uint8_t __xdata *)0x8004)
-#define RTC_HOUR_ALM (*(volatile uint8_t __xdata *)0x8005)
-#define RTC_WEEKDAY (*(volatile uint8_t __xdata *)0x8006)
-#define RTC_DATE (*(volatile uint8_t __xdata *)0x8007)
-#define RTC_MONTH (*(volatile uint8_t __xdata *)0x8008)
-#define RTC_YEAR (*(volatile uint8_t __xdata *)0x8009)
-#define RTC_A (*(volatile uint8_t __xdata *)0x800A)
-#define RTC_B (*(volatile uint8_t __xdata *)0x800B)
-#define RTC_C (*(volatile uint8_t __xdata *)0x800C)
-#define RTC_D (*(volatile uint8_t __xdata *)0x800D)
-#define RTC_FLAG (*(volatile uint8_t __xdata *)0x800F)
+SFRX(RTC_SECOND, 0x8000); /* DS12C887 RTC */
+SFRX(RTC_SEC_ALM, 0x8001);
+SFRX(RTC_MINUTE, 0x8002);
+SFRX(RTC_MIN_ALM, 0x8003);
+SFRX(RTC_HOUR, 0x8004);
+SFRX(RTC_HOUR_ALM, 0x8005);
+SFRX(RTC_WEEKDAY, 0x8006);
+SFRX(RTC_DATE, 0x8007);
+SFRX(RTC_MONTH, 0x8008);
+SFRX(RTC_YEAR, 0x8009);
+SFRX(RTC_A, 0x800A);
+SFRX(RTC_B, 0x800B);
+SFRX(RTC_C, 0x800C);
+SFRX(RTC_D, 0x800D);
+SFRX(RTC_FLAG, 0x800F);
 
-#define SEG_PATTERN \
-    (*(volatile uint8_t __xdata *)0x8100) /* segment pattern data */
-#define DIG_SELECT (*(volatile uint8_t __xdata *)0x8200) /* digit select data */
+SFRX(SEG_PATTERN, 0x8100); /* segment pattern data */
+SFRX(DIG_SELECT, 0x8200);  /* digit select data */
 
-#define LCD_WR_INST (*(volatile uint8_t __xdata *)0x8300) /* LCD module */
-#define LCD_WR_DATA (*(volatile uint8_t __xdata *)0x8301)
+SFRX(LCD_WR_INST, 0x8300); /* LCD module */
+SFRX(LCD_WR_DATA, 0x8301);
 
-#define ADC_CH0 \
-    (*(volatile uint8_t __xdata *)0x8400) /* select ADC0809 channel */
-#define ADC_CH1 (*(volatile uint8_t __xdata *)0x8401)
-#define ADC_CH2 (*(volatile uint8_t __xdata *)0x8402)
-#define ADC_CH3 (*(volatile uint8_t __xdata *)0x8403)
-#define ADC_CH4 (*(volatile uint8_t __xdata *)0x8404)
-#define ADC_CH5 (*(volatile uint8_t __xdata *)0x8405)
-#define ADC_CH6 (*(volatile uint8_t __xdata *)0x8406)
-#define ADC_CH7 (*(volatile uint8_t __xdata *)0x8407)
-#define ADC_READ (*(volatile uint8_t __xdata *)0x8400) /* read ADC0809 */
+SFRX(ADC_CH0, 0x8400); /* select ADC0809 channel */
+SFRX(ADC_CH1, 0x8401);
+SFRX(ADC_CH2, 0x8402);
+SFRX(ADC_CH3, 0x8403);
+SFRX(ADC_CH4, 0x8404);
+SFRX(ADC_CH5, 0x8405);
+SFRX(ADC_CH6, 0x8406);
+SFRX(ADC_CH7, 0x8407);
+SFRX(ADC_READ, 0x8400); /* read ADC0809 */
 
-#define DAC_CS (*(volatile uint8_t __xdata *)0x8500) /* output DAC0800 */
+SFRX(DAC_CS, 0x8500); /* output DAC0800 */
 
 /* -------------------------------------------------------------------------- */
 /*   OK-89S52 Kit User-defined Function                                       */

@@ -3,8 +3,8 @@
 
 #include <at89s52.h>
 
-#define SEG_PATTERN (*(volatile uint8_t __xdata *)0x8100)
-#define DIG_SELECT (*(volatile uint8_t __xdata *)0x8200)
+SFRX(SEG_PATTERN, 0x8100); /* segment pattern data */
+SFRX(DIG_SELECT, 0x8200);  /* digit select data */
 
 void Delay_ms(uint16_t ms) /* time delay for ms[ms] at 24MHz */
 {
